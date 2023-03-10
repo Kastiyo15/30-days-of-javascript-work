@@ -105,9 +105,16 @@ let squaredNum = (function (n) {
 
 
 /* Arrow function - uses arrow instead of function keyword */
+// normal function
+function cubed(n) {
+    return n * n * n;
+}
+
+// arrow function
 const cubed = n => n * n * n; // -> 8
 console.log(`Cubed: ${cubed(2)}`);
 
+// another arrow function
 const changeToUpperCase = arr => {
     const newArr = [];
     for (const element of arr) {
@@ -123,6 +130,11 @@ console.log(changeToUpperCase(countries));
 
 
 /* Functions with default parameters - if no argument is passed, the default value is used*/
+function functionName(param = value) {
+    //code
+}
+functionName();
+
 function weightOfObject(mass, gravity = 9.81) {
     let weight = mass * gravity + ' N' // the value has to be changed to string first
     return weight

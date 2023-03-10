@@ -443,3 +443,14 @@ function reverseCountries(arr) {
     return result;
 }
 console.log(reverseCountries(['Brazil', 'Columbia', 'Argentina', 'Peru', 'Chile']));
+
+
+// Generate hex colour using one line of code
+function generateHexColour() {
+    let result = 0;
+    result = Math.floor(Math.random() * 0xffffff).toString(16);
+
+    return `#${result}`;
+}
+console.log(`Random Hex Colour: ${generateHexColour()}`);
+
