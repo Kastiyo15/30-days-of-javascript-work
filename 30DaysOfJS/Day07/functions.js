@@ -111,11 +111,13 @@ function cubed(n) {
 }
 
 // arrow function
-const cubed = n => n * n * n; // -> 8
+const cubed = (n) => {
+    n * n * n;
+}; // -> 8
 console.log(`Cubed: ${cubed(2)}`);
 
 // another arrow function
-const changeToUpperCase = arr => {
+const changeToUpperCase = (arr) => {
     const newArr = [];
     for (const element of arr) {
         newArr.push(element.toUpperCase());

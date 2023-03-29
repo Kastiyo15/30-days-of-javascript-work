@@ -163,6 +163,7 @@ averageRating(`eedfcf`);
 // Create a function called likeProduct. This function will helps to like to the product if it is not liked and remove like if it was liked.
 function likeProduct(productId, userId) {
   const values = Object.values(products);
+  console.log(values)
 
   for (let i = 0; i < values.length; i++) {
     let product = values[i];
