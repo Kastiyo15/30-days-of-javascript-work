@@ -344,3 +344,16 @@ const sortRemember = () => {
   console.log(nums);
 }
 sortRemember();
+
+
+
+///* flat *///
+/* 
+w3schools.com
+The flat() method concatenates sub-array elements.
+syntax: array.flat(depth) // 'Infinity' targets long arrays
+*/
+
+/* EXAMPLES */
+const myArr = [1, 2, [3, [4, 5, 6], 7], 8];
+const newArr = myArr.flat(2);
