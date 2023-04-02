@@ -2,6 +2,7 @@
 const rock_btn = document.getElementById('rock');
 const paper_btn = document.getElementById('paper');
 const scissors_btn = document.getElementById('scissors');
+const reset_btn = document.getElementById('reset-button');
 
 const scoreWin_txt = document.getElementById('win-score');
 const scoreTie_txt = document.getElementById('tie-score');
@@ -138,7 +139,7 @@ const updateScore = (result) => {
 
 const setResultText = (result) => {
   compChoice_txt.innerText = computerMove;
-  gameResult_text.innerText = result;
+  gameResult_text.innerText = "You " + result;
 
   buttonTimeout();
 }
@@ -166,8 +167,21 @@ const buttonTimeout = () => {
     paper_btn.classList.remove('disabled');
     scissors_btn.classList.remove('disabled');
   }, 1000);
-
 }
+
+
+const resetScore = () => {
+  score.win = 0;
+  score.tie = 0;
+  score.lose = 0;
+
+  setScoreText();
+};
+
+
+// Add event listener
+reset_btn.addEventListener('click', resetScore);
+
 
 // set text
 setScoreText();
